@@ -1,0 +1,36 @@
+extends layouts/layout_topnavbar
+
+block page_head
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+  meta(name='description', content='#{description}')
+  meta(name='keywords', content='')
+  meta(name='author' content='Hoya Kim')
+
+  meta(name='og:type', content='website')
+  meta(name='og:site_name', content='Storymate')
+  meta(name='og:image', content="#{title_image}")
+  meta(name='og:title', content='#{title}')
+  meta(name='og:description', content="#{description}")
+
+  link(rel="icon" type="image/ico" href="#{app_root}/assets/img/favicon.ico")
+
+  title #{title}
+
+block vendor_css
+  // ## CDN stylesheets
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css')
+
+  // Common app styles
+  link(rel='stylesheet', href='#{app_root}/common/css/app.css')
+
+block vendor_js
+  script(src='#{app_root}/common/js/app.js')
+
+block page_css
+
+block content

@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    include partials/common
+
+    meta(charset='utf-8')
+    meta(name="apple-mobile-web-app-capable" content="yes")
+
+    block page_head
+
+    // Vendor css
+    block vendor_css
+
+    // Page specific css
+    block page_css
+
+    // ## CDN javascripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/core-js/1.2.5/core.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js')
+
+
+  body
+    nav.navbar.navbar-static-top
+      .navbar-header
+        button.btn.navbar-btn.btn-primary.pull-right.sidemenu-toggler(data-toggle="button")
+          i.fa.fa-bars
+        block header
+
+    block content
+
+    // Vendor js
+    block vendor_js
+    // Page specific javascripts
+    block page_js

@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    include partials/common
+
+    meta(charset='utf-8')
+
+    block page_head
+
+    // Vendor css
+    block vendor_css
+    // Page specific css
+    block page_css
+
+    style.
+      body {
+        overflow:hidden;
+      }
+
+    // ## CDN javascripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/core-js/1.2.5/core.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js')
+
+
+  body
+    block content
+
+    // Vendor js
+    block vendor_js
+    // Page specific javascripts
+    block page_js
